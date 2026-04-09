@@ -61,7 +61,7 @@ def render_survival_analysis(df):
     st.header("🧬 Survival Determinants")
     category = st.selectbox("View survival rate by:", ["Sex", "Pclass", "Embarked", "SibSp"])
     
-    fig, ax = plt.subplots(figsize=(8, 4))
+    fig, ax = plt.subplots(figsize=(6, 3))
     sns.barplot(x=category, y='Survived', data=df, palette='magma', ax=ax)
     st.pyplot(fig)
 
